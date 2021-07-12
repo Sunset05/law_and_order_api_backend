@@ -1,0 +1,2 @@
+class Detective < ApplicationRecord
+end

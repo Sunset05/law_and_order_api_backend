@@ -1,0 +1,2 @@
+class PerpsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class Perp < ApplicationRecord
+end
