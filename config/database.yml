@@ -11,6 +11,8 @@ default: &default
 development:
   <<: *default
   database: law_and_order_api_development
+  username: funk
+  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,3 +24,4 @@ test:
 production:
   <<: *default
   database: law_and_order_api_production
+

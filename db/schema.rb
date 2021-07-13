@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_07_11_163521) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "detectives", force: :cascade do |t|
     t.string "name"
     t.string "actor"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 2021_07_11_163521) do
 
   create_table "episodes", force: :cascade do |t|
     t.string "title"
-    t.integer "season_id", null: false
-    t.integer "perp_id", null: false
+    t.bigint "season_id", null: false
+    t.bigint "perp_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["perp_id"], name: "index_episodes_on_perp_id"
