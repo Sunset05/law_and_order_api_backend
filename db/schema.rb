@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_11_163521) do
+ActiveRecord::Schema.define(version: 2021_07_14_162831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2021_07_11_163521) do
     t.string "actor"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "image"
   end
 
   create_table "episodes", force: :cascade do |t|
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_07_11_163521) do
     t.bigint "perp_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "episode_number"
     t.index ["perp_id"], name: "index_episodes_on_perp_id"
     t.index ["season_id"], name: "index_episodes_on_season_id"
   end
